@@ -1,0 +1,612 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    min-width: 350px;
+    min-height: 300px;
+    max-width: 350px;
+    font-family: 'Lato', sans-serif;
+}
+
+.headerbox {
+    background-color: rgb(66, 133, 244);
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+    border-bottom-left-radius: 4px;
+    border-bottom-right-radius: 4px;
+    margin-top: 4px;
+    margin-bottom: 4px;
+    text-align: center;
+    color: white;
+}
+
+/* #micdiv {
+    position: absolute;
+    left: -10px;
+    bottom: -28px;
+}
+
+#textareadiv {
+    position: absolute;
+    left: 34px;
+}
+
+#senddiv {
+    position: absolute;
+    right: -10px;
+    bottom: -28px;
+} */
+
+#senddiv {
+    display: none;
+}
+
+.dark {
+    background: rgb(25, 50, 76);
+}
+
+.header-modified {
+    background-color: rgb(25, 50, 76);
+}
+
+.body {
+    background-color: rgb(25, 50, 76);
+}
+
+.scroll-icon-bottom, .scroll-icon-top{
+    position: absolute;
+    right: 20px;
+    cursor: pointer;
+    bottom: 85px;
+    background-color: rgb(66, 133, 244);
+    padding: 0px 8px;
+    border-radius: 50%;
+    padding-top: 5px;
+    display: none;
+}
+
+.surroundbox {
+    min-width: 300px;
+    min-height: 300px;
+    position: relative;
+    padding: 0 5px;
+    padding-bottom: 0;
+}
+
+.box {
+    background-color: rgb(243, 242, 244);
+    padding-right: 10px;
+    padding-bottom: 2px;
+    padding-top: 2px;
+}
+
+.box:not(:last-child) {
+    margin-bottom: 6px;
+}
+
+.messages {
+    overflow-y: auto;
+    height: 250px;
+    padding-right: 10px;
+}
+
+.mynewmessage {
+    margin-right: 0.5rem;
+    background-color: #e0e0e0;
+    min-width: 110px;
+    max-width: 80%;
+    float: right;
+    clear: both;
+    overflow-wrap: break-word;
+    position: relative;
+    padding: 0.5rem;
+    margin-top: 0.5rem;
+    border-radius: 0.5rem 0.5rem;
+    border-top-right-radius: 0;
+    padding: 6px 7px 8px 9px;
+    box-shadow: 0 1px 0.5px rgba(0, 0, 0, 0.13);
+}
+
+.mynewmessage:before {
+    content: '';
+    position: absolute;
+    border-color: transparent transparent transparent black;
+    border-width: 5px 0 5px 5px;
+    border-style: solid;
+    right: -5px;
+    top: 0.5px;
+    border-radius: 20%;
+}
+
+.mynewmessage:after {
+    content: '';
+    position: absolute;
+    border-color: transparent transparent transparent #e0e0e0;
+    border-width: 5px 0 5px 5px;
+    border-style: solid;
+    right: -4.5px;
+    top: 0.3px;
+    border-radius: 20%;
+    float: right;
+    clear: both;
+}
+
+.mynewmessage p {
+    display: inline;
+    font-size: 14px;
+}
+
+.susinewmessage {
+    text-align: left;
+    margin-left: 0.3rem;
+    padding: 6px 7px 8px 9px;
+    margin-top: 0.5rem;
+    min-width: 110px;
+    max-width: 80%;
+    float: left;
+    clear: both;
+    overflow-wrap: break-word;
+    background-color: #fff;
+    position: relative;
+    border-radius: 0.5rem 0.5rem;
+    border-top-left-radius: 0;
+    box-shadow: 0 1px 0.5px rgba(0, 0, 0, 0.13);
+}
+
+.susinewmessage:before {
+    content: '';
+    position: absolute;
+    border-color: transparent black transparent transparent;
+    border-width: 5px 5px 5px 0;
+    border-style: solid;
+    left: -5px;
+    top: 0.5px;
+    border-radius: 20%;
+}
+
+.susinewmessage:after {
+    content: '';
+    position: absolute;
+    border-color: transparent #fff transparent transparent;
+    border-width: 5px 5px 5px 0;
+    border-style: solid;
+    left: -4.5px;
+    top: 0.3px;
+    border-radius: 20%;
+}
+
+.susinewmessage p {
+    display: inline;
+    font-size: 14px;
+}
+
+.send {
+    position: absolute;
+    bottom: 0;
+}
+
+.button {
+    margin-left: 15px;
+    border: none;
+    color: rgb(66, 133, 244);
+}
+
+.susi-img {
+    border: solid 0.2em;
+    width: 100%;
+}
+
+.textarea:active,
+.textarea:focus,
+.textarea:hover {
+    border-color: rgb(66, 133, 244);
+}
+
+#susi-logo {
+    float: center;
+    margin-left: 0px;
+    padding-top: 6px;
+    width: 100px;
+    height: auto;
+}
+
+.fieldmod {
+    background-color: rgb(25, 50, 76);
+}
+
+.butmod {
+    background-color: rgb(25, 50, 76);
+}
+
+.icon {
+    margin-left: 15px;
+    margin-right: 15px;
+}
+
+#setting {
+    float: left;
+    padding: 5px;
+    color: white;
+}
+
+.textarea {
+    /* max-width: 125%; */
+    width: 118%;
+    margin-bottom: 5px;
+    resize: none;
+    border-radius: 7px;
+}
+
+.textarea-mod {
+    background-color: rgb(25, 50, 76);
+    border: 0;
+    color: #0ad5c1;
+}
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 35px;
+    height: 22px;
+}
+
+.darkform {
+    background-color: rgb(25, 50, 76);
+}
+
+.icon-mod {
+    color: silver;
+    background-color: rgb(25, 50, 76);
+}
+
+.icon1-mod {
+    color: silver;
+    background-color: rgb(25, 50, 76);
+}
+
+.message-dark:before {
+    content: '';
+    position: absolute;
+    border-color: transparent transparent transparent black;
+    border-width: 5px 0 5px 5px;
+    border-style: solid;
+    right: -5px;
+    top: 0.5px;
+    border-radius: 20%;
+}
+
+.message-dark:after {
+    content: '';
+    position: absolute;
+    border-color: transparent transparent transparent #0A5658;
+    border-width: 5px 0 5px 5px;
+    border-style: solid;
+    right: -4.5px;
+    top: 0.3px;
+    border-radius: 20%;
+    float: right;
+    clear: both;
+}
+
+.message-dark {
+    background-color: rgba(25, 147, 147, .2);
+    color: #0ad5c1;
+}
+
+.message-susi-dark:before {
+    content: '';
+    position: absolute;
+    border-color: transparent black transparent transparent;
+    border-width: 5px 5px 5px 0;
+    border-style: solid;
+    left: -5px;
+    top: 0.5px;
+    border-radius: 20%;
+}
+
+.message-susi-dark:after {
+    content: '';
+    position: absolute;
+    border-color: transparent #0A5658 transparent transparent;
+    border-width: 5px 5px 5px 0;
+    border-style: solid;
+    left: -4.5px;
+    top: 0.3px;
+    border-radius: 20%;
+}
+
+.message-susi-dark {
+    background-color: rgba(25, 147, 147, .2);
+    color: #0ec879;
+}
+
+.box-modified {
+    background-color: rgb(25, 50, 76);
+}
+
+.switch input {
+    display: none;
+}
+
+
+/* The slider */
+
+.theme {
+    float: right;
+    padding: 5px;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #14224a;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 20px;
+    width: 20px;
+    left: 1px;
+    bottom: 1px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+input:checked+.slider {
+    background-color: #2196F3;
+}
+
+input:focus+.slider {
+    box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked+.slider:before {
+    transform: translateX(16px);
+}
+
+
+/* Rounded sliders */
+
+.slider.round {
+    border-radius: 34px;
+}
+
+.slider.round:before {
+    border-radius: 50%;
+}
+
+#micimg {
+    height: 72px;
+    width: 72px;
+}
+.micmodal {
+    width: 100%;
+    z-index: 1;
+    display: none;
+    background-color: white;
+    position: absolute;
+}
+
+.active {
+    display: block;
+}
+
+.micmodal-content {
+    text-align: center;
+}
+
+.micmodal-modified {
+    background-color: #19455a;
+    color: #0cd5ba;
+}
+
+#dropdown{
+    position: relative;
+    display: inline-block;
+    right: 10px;
+    top: 7px;
+
+}
+
+.dropdown {
+   float: right;
+   cursor: pointer;
+   padding-left: 25px;
+   padding-bottom: 7px;
+}
+
+ .theme {
+   float: left;
+   padding-right: 30px;
+}
+
+.dropdown-content{
+    display: flex;
+    flex-direction: column;
+}
+
+.dropdown-content{
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 150px;
+    box-shadow: 0px 8px 16px 0px rgb(0,0,0,0.2);
+    padding: 12px 0;
+    z-index: 5;
+    color: grey;
+    list-style: none;
+    text-align: right;
+    top:30px;
+    right: 10px;
+}
+.dropdown:hover .dropdown-content{
+    display: flex;
+}
+
+#ddown{
+    background-color: rgb(66,133,244);
+    color: white;
+    border:none;
+    margin-top: 2px;
+    height: 40px;
+}
+.dropdown-content li:hover{
+    background-color: #e5e5e5;
+}
+.dropdown-content li{
+    letter-spacing: 0.5px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 5px 0;
+    padding: 0 16px;
+}
+.dropdown-content a li img {
+    height: 30px;
+}
+.dropdown-content a{
+    color: #676767;
+}
+.dropdown-content a:hover{
+    background-color: #e5e5e5;
+}
+.table-response {
+    table-layout: fixed;
+    width: 100%;
+    height: 40%;
+    overflow: auto;
+}
+
+.table-response tr {
+    font-size: 0.8em;
+    border-bottom: 1px solid lightgrey;
+}
+
+td,
+th {
+    padding: 0.1rem;
+    overflow: hidden;
+    white-space: nowrap;
+    height: 30px;
+    text-overflow: ellipsis;
+}
+
+.link {
+    color: rgb(66, 133, 244);
+}
+
+.drop-dark {
+    background: rgb(25, 50, 76);
+}
+
+.table-height {
+    height: 75%;
+    overflow: auto;
+}
+
+.empty-history{
+    background-color: #dbdbdb;
+    margin: 15px;
+    margin-left: 60px;
+    margin-right: 60px;
+    padding: 6px;
+    border-radius: 40px;
+    text-align: center;
+ }
+
+
+/* Scrollbar style */
+
+::-webkit-scrollbar {
+    background: transparent;
+    width: 10px;
+}
+
+.table-height::-webkit-scrollbar {
+    display: none;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: darkgrey;
+    border-radius: 20px;
+}
+
+.dark ::-webkit-scrollbar-thumb {
+    background-color: #009688;
+}
+
+.field.has-addons {
+    display: flex;
+    align-items: center;
+}
+
+#textareadiv {
+    flex: 1;
+}
+
+.icon {
+    height: auto;
+}
+
+.button.is-hovered, .button:hover {
+    transition: all .2s;
+}
+
+.scroll-dark {
+    background-color: rgba(25, 147, 147, .8);
+}
+.mapClass{
+    height: 200px;
+    width: 200px;
+}
+
+iframe#youtube-video {
+    width: 260px;
+}
+
+.table-tweet-response{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: normal;
+    width: 80px;
+}
+
+.susimessage-footer {
+    list-style-type: none;
+    font-size: 12px;
+    color: #90a4ae;
+    margin: 3px 0 -3px -38px;
+    padding: 0;
+    text-align: right;
+}
+
+.mymessage-footer{
+    list-style-type: none;
+    font-size: 12px;
+    color: #90a4ae;
+    padding: 0;
+}
+
+.fa{
+    margin-left: 5px;
+    cursor: pointer;
+}
+
+p.time {
+    font-size: 12px;
+}
+
+.susi-text-container{
+    padding-right: 8px;
+}
